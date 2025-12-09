@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Venecia</title>
+        <meta charset="utf-8">
+        <!-- FAVICON -->
+        <link href="MEDIA/IMG/FAVICON.svg" rel="icon" type="image/png">
+        <!-- CSS -->
+        <link href="CSS/styles.css" rel="stylesheet" type="text/css">
+
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+
+        <!-- ICONOS - FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <body>
+        <header>
+            <nav id="menu">
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="MEDIA/IMG/LOGO_ICONO.svg" alt="Venecia">
+                        <img src="MEDIA/IMG/LOGO_NOMBRE.svg" alt="Venecia">
+                    </div>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="index.html" onclick="closeMenu()">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#historia" onclick="closeMenu()">Historia</a>
+                    </li>
+                    <li>
+                        <a href="#descubre" onclick="closeMenu()">Descubre</a>
+                    </li>
+                    <li>
+                        <a href="carnavales.html" onclick="closeMenu()"><span class="carnaval-btn">Carnavales</span></a>
+                    </li>     
+                </ul>
+
+                <!-- MENU AMBURGUESA -->
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <!-- ICONO "CLOSE" -->
+                <div class="close-icon">
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </div>
+            </nav>
+            
+            <hr class="linea_hor">
+
+            <div class="title_header">
+                <div>
+                    <h1>Venecia</h1>
+                    <h3>donde cada paso inspira</h3>
+                </div>
+                <a href="#historia">
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- SECCION - HITORIA -->
+        <section id="historia">
+            <div class="title_lineas">
+                <div class="linea"></div>
+                <h2>Historia</h2>
+                <div class="linea"></div>
+            </div>
+
+            <p>Venecia no nació en una fecha exacta, como dice el mito del año 421, sino que surgió entre los siglos V y VI, cuando habitantes del continente huyeron de invasiones y se refugiaron en los islotes de la laguna. Con el tiempo, esos asentamientos temporales se volvieron permanentes y, aunque la zona dependía de Bizancio, los pobladores fueron ganando autonomía eligiendo a su propio “dux”.
+
+            La isla de Rialto se convirtió en el núcleo principal, especialmente tras la llegada en 828 de las reliquias de San Marcos, que dieron prestigio religioso y político a la comunidad. Al crecer la población, las islas se unieron mediante barrios construidos sobre pilotes, y la ciudad se fortificó ante ataques como el de los húngaros en 899.
+
+            Gracias a su posición estratégica entre Oriente y Occidente, Venecia desarrolló un poderoso comercio marítimo. Su expansión culminó con la Cuarta Cruzada en 1204, que le otorgó gran riqueza y dominio en el Mediterráneo. Así, la antigua comunidad de refugiados terminó convirtiéndose en la influyente República de Venecia, la “Serenísima”.</p>
+        </section>
+
+        <!-- SECCION - DESCUBRE -->
+        <section id="descubre">
+            <div class="title">
+                <div class="title_lineas">
+                    <div class="linea"></div>
+                    <h2>Descubre Venecia</h2>
+                    <div class="linea"></div>
+                </div>
+                <h4>desde otra perspectiva</h4>
+            </div>
+            <!-- TO DO - Mapa con puntos claves -->
+        </section>
+
+
+        <!-- JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="JS/script.js"></script>
+    </body>
+</html>
