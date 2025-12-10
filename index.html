@@ -21,21 +21,21 @@
         <header>
             <nav id="menu">
                 <a href="index.html">
-                    <div class="logo">
+                    <figure class="logo">
                         <img src="MEDIA/IMG/LOGO_ICONO.svg" alt="Venecia">
                         <img src="MEDIA/IMG/LOGO_NOMBRE.svg" alt="Venecia">
-                    </div>
+                    </figure>
                 </a>
 
                 <ul>
                     <li>
-                        <a href="index.html" onclick="closeMenu()">Inicio</a>
+                        <a href="index.html" class="nav_line" onclick="closeMenu()">Inicio</a>
                     </li>
                     <li>
-                        <a href="#historia" onclick="closeMenu()">Historia</a>
+                        <a href="#historia" class="nav_line" onclick="closeMenu()">Historia</a>
                     </li>
                     <li>
-                        <a href="#descubre" onclick="closeMenu()">Descubre</a>
+                        <a href="#descubre" class="nav_line" onclick="closeMenu()">Descubre</a>
                     </li>
                     <li>
                         <a href="carnavales.html" onclick="closeMenu()"><span class="carnaval-btn">Carnavales</span></a>
@@ -93,6 +93,71 @@
             </div>
             <!-- TO DO - Mapa con puntos claves -->
         </section>
+
+
+        <!-- SECCION - CARNAVALES -->
+        <section id="carnavales">
+            <div class="title">
+                <div class="title_lineas">
+                    <div class="linea"></div>
+                    <h2>Carnvales</h2>
+                    <div class="linea"></div>
+                </div>
+                <h4>conoce la historia completa</h4>
+            </div>
+
+            <div id="galeria">
+                <figure>
+                    <img src="MEDIA/IMG/CARRUSEL/persona_rosa.webp" alt="">
+                    <figcaption></figcaption>
+                </figure>
+                <figure>
+                    <img src="MEDIA/IMG/CARRUSEL/persona_bn.webp" alt="">
+                    <figcaption></figcaption>
+                </figure>
+                <figure>
+                    <img src="MEDIA/IMG/CARRUSEL/persona_rojo.webp" alt="">
+                    <figcaption></figcaption>
+                </figure>
+                <figure>
+                    <img src="MEDIA/IMG/CARRUSEL/pareja.webp" alt="">
+                    <figcaption></figcaption>
+                </figure>
+                <figure>
+                    <img src="MEDIA/IMG/CARRUSEL/persona_azul.webp" alt="">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            
+            <!--Círculos inferiores-->
+            <div id="circulos">
+            <div onclick="setImagenActual(1)"></div>
+            <div onclick="setImagenActual(2)"></div>
+            <div onclick="setImagenActual(3)"></div>
+            <div onclick="setImagenActual(4)"></div>
+            <div onclick="setImagenActual(5)"></div>
+        </div>
+
+
+            <!-- <div class="carousel">
+                <div class="carousel-track">
+                    <div class="slide"><img src="img1.jpg" alt=""></div>
+                    <div class="slide"><img src="img2.jpg" alt=""></div>
+                    <div class="slide"><img src="img3.jpg" alt=""></div>
+                </div>
+
+                <div class="indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div> -->
+
+        </section>
+
+
+
+
 
 
         <!-- JS -->
