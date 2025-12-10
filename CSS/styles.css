@@ -193,10 +193,20 @@ header {
     opacity: 50%;
     cursor: pointer;
     transition: all 0.2s ease;
+    animation: bounce 2s infinite ease-in-out;
 }
 
 .title_header > a > i:hover {
     opacity: 100%;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 
@@ -262,83 +272,6 @@ header {
 
 
 /* SECCION - CARNAVALES */
-/* .carousel {
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-    overflow: visible;
-    padding-bottom: 2.5rem;
-}
-
-.carousel-track {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    transition: transform .6s ease;
-}
-
-.slide {
-    position: relative;
-    flex: 0 0 30%;
-    height: 380px;
-    border-radius: 22px;
-    overflow: hidden;
-    transition: all .5s ease;
-    opacity: 0.4;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-/* Efecto oscuro en laterales */
-/* .slide:not(.active)::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-} */
-
-/* Imagen central más grande */
-/* .slide.active {
-    flex: 0 0 40%;
-    height: 450px;
-    opacity: 1;
-}
-
-.slide.active::after {
-    background: transparent;
-} */
-
-/* ---- Indicadores ---- */
-/* .indicators {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ccc;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.dot.active {
-    background: #000;
-} */
-
-
-
-
 #carnavales {
     height: 100vh;
     background-color: var(--black-color);
@@ -387,8 +320,8 @@ header {
 }
 
 #circulos > div {
-    height: 1em;
-    width: 1em;
+    height: 0.8rem;
+    width: 0.8rem;
     margin: 0.3em;
     border: var(--white-color) 2px solid;
     border-radius: 50%;
