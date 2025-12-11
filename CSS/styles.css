@@ -100,7 +100,8 @@ header {
     /* padding: 0.6rem 0; */
 }
 
-.logo {
+.logo,
+footer :first-child a figure {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -331,4 +332,106 @@ header {
 
 .active {
     background-color: var(--white-color);
+}
+
+hr {
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background-color: var(--black-color);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--black-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0 6rem;
+    align-items: self-end;
+}
+
+footer > div p {
+    /* width: 7rem; */
+    white-space: pre-line;
+}
+
+footer :first-child a figure {
+    width: 10rem;
+}
+
+footer :first-child a figure > :first-child {
+    height: 3.8rem;
+    margin-bottom: 2px;
+}
+
+
+footer > div p {
+    text-align: left;
+    font-size: 0.8rem;
+    margin-top: 1.8rem;
+}
+
+.info p {
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+.icons > a {
+    font-size: 1.3rem;
+}
+
+.icons > a i {
+    transition: all 0.3s ease;
+}
+
+.icons a:hover i {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+}
+
+#newsletter h2 {
+    font-size: 1.5rem;
+}
+
+#newsletter div {
+    margin-top: 1rem;
+    border: 2px solid;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#newsletter div form input {
+    background-color: transparent;
+    border: none;
+    color: var(--white-color);
+    margin: 0 10px;
+}
+
+#newsletter div form input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#newsletter div form input:focus {
+    border-bottom-color: var(--white-color);
+    outline: none;
+}
+
+#newsletter div button {
+    color: var(--black-color);
+    border: none;
+    border-radius: 18px;
+    padding: 8px;
+    font-weight: 600;
 }

@@ -20,7 +20,7 @@
     <body>
         <header>
             <nav id="menu">
-                <a href="index.html">
+                <a href="index.html" class="icono_logo">
                     <figure class="logo">
                         <img src="MEDIA/IMG/LOGO_ICONO.svg" alt="Venecia">
                         <img src="MEDIA/IMG/LOGO_NOMBRE.svg" alt="Venecia">
@@ -131,30 +131,61 @@
             
             <!--Círculos inferiores-->
             <div id="circulos">
-            <div onclick="setImagenActual(1)"></div>
-            <div onclick="setImagenActual(2)"></div>
-            <div onclick="setImagenActual(3)"></div>
-            <div onclick="setImagenActual(4)"></div>
-            <div onclick="setImagenActual(5)"></div>
-        </div>
-
-
-            <!-- <div class="carousel">
-                <div class="carousel-track">
-                    <div class="slide"><img src="img1.jpg" alt=""></div>
-                    <div class="slide"><img src="img2.jpg" alt=""></div>
-                    <div class="slide"><img src="img3.jpg" alt=""></div>
-                </div>
-
-                <div class="indicators">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div> -->
-
+                <div onclick="setImagenActual(1)"></div>
+                <div onclick="setImagenActual(2)"></div>
+                <div onclick="setImagenActual(3)"></div>
+                <div onclick="setImagenActual(4)"></div>
+                <div onclick="setImagenActual(5)"></div>
+            </div>
         </section>
 
+
+        <!-- FOOTER -->
+        <hr>
+        <footer>
+            <div>
+                <a href="index.html">
+                    <figure>
+                        <img src="MEDIA/IMG/LOGO_ICONO.svg" alt="Venecia">
+                        <img src="MEDIA/IMG/LOGO_NOMBRE.svg" alt="Venecia">
+                    </figure>
+                </a>
+                <p>&copy; 2025 Descubre Venecia.
+                    Todos los derechos reservados</p>
+            </div>
+            <div class="footer-container">
+                <div class="info">
+                    <p>Contacto</p>
+                    <p>Política de privacidad</p>
+                    <p>Configuración de cookies</p> 
+                </div>
+                <div class="icons">
+                    <a href="#" title="facebook" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" title="instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" title="tiktok" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://youtu.be/8VFaSGi0YRs" title="youtube" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="newsletter">
+                <h2>Newsletter</h2>
+                <div>
+                    <form onsubmit="return comprar()">
+                        <label for="correo"></label>
+                        <input type="email" id="correo" placeholder="Escriba su e-mail" required>
+                    </form>
+                    <!-- <p>Escriba su email</p> -->
+                    <button>Enviar</button>
+                </div>
+            </div>
+        </footer>
 
 
 

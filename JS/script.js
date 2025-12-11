@@ -9,7 +9,7 @@ function shrinkHeader() {
             "background-color": "var(--black-color)",
             "border-bottom": "none",
         });
-        $("a").css("fontSize", "0.9rem");
+        $(".icono_logo").css("fontSize", "0.9rem");
         $(".logo").css({
             "flex-direction": "row",
             "width": "4.5rem",
@@ -23,7 +23,7 @@ function shrinkHeader() {
             "background-color": "transparent",
             "border-bottom": "3px solid rgba(255, 255, 255, 0.5)",
         });
-        $("a").css("fontSize", "1rem");
+        $(".icono_logo").css("fontSize", "1rem");
         $(".logo").css({
             "flex-direction": "column",
             "width": "5rem",
