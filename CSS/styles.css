@@ -276,6 +276,7 @@ footer :first-child a figure {
 #carnavales {
     height: 100vh;
     background-color: var(--black-color);
+    padding: 4rem 8rem;
 }
 
 #galeria {
@@ -333,6 +334,17 @@ footer :first-child a figure {
 .active {
     background-color: var(--white-color);
 }
+
+.sb {
+    text-align: center;
+    text-decoration: none;
+}
+
+.sb span {
+    padding: 0.9rem 2rem;
+    border-radius: 2rem;
+}
+
 
 hr {
     border: 1.5px solid rgba(255, 255, 255, 0.5);
@@ -416,7 +428,6 @@ footer > div p {
     background-color: transparent;
     border: none;
     color: var(--white-color);
-    margin: 0 10px;
 }
 
 #newsletter div form input::placeholder {
@@ -428,10 +439,26 @@ footer > div p {
     outline: none;
 }
 
-#newsletter div button {
+#newsletter div form input[type=email] {
+    margin: 0 10px;
+}
+
+#newsletter div form input[type=submit] {
+    background-color: var(--white-color);
     color: var(--black-color);
     border: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+#newsletter div form input[type=submit] {
     border-radius: 18px;
     padding: 8px;
-    font-weight: 600;
+}
+
+#newsletter div form input[type=submit]:hover {
+    background: var(--black-color);
+    color: var(--white-color);
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
