@@ -31,7 +31,7 @@
                     </figure>
                 </a>
 
-                <ul>
+                <ul id="menu-lista">
                     <li>
                         <a href="index.html" class="nav_line" onclick="closeMenu()">Inicio</a>
                     </li>
@@ -47,12 +47,10 @@
                 </ul>
 
                 <!-- MENU AMBURGUESA -->
-                <div class="menu-icon" onclick="openMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <!-- ICONO "CLOSE" -->
-                <div class="close-icon">
-                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <div id="icono" onclick="menu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </nav>
 
@@ -180,11 +178,9 @@
                 <h4>desde otra perspectiva</h4>
             </div>
             <p>A continuación, se muestra cómo ha evolucionado la afluencia de visitantes al Carnaval de Venecia en los últimos años, reflejando su impacto y crecimiento como uno de los eventos más emblemáticos de la ciudad.</p>
-            <main>
-                <div>
-                    <canvas id="lineas"></canvas>
-                </div>
-            </main>
+            <div>
+                <canvas id="lineas"></canvas>
+            </div>
         </section>
 
 

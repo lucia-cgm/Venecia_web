@@ -9,6 +9,7 @@ function shrinkHeader() {
             "background-color": "var(--black-color)",
             "border-bottom": "none",
         });
+        // $("#icono > div").css("background-color", "var(--black-color)");
         $(".icono_logo").css("fontSize", "0.9rem");
         $(".logo").css({
             "flex-direction": "row",
@@ -23,6 +24,7 @@ function shrinkHeader() {
             "background-color": "transparent",
             "border-bottom": "3px solid rgba(255, 255, 255, 0.5)",
         });
+        // $("#icono > div").css("background-color", "white");
         $(".icono_logo").css("fontSize", "1rem");
         $(".logo").css({
             "flex-direction": "column",
@@ -44,19 +46,52 @@ $(document).ready(function () {
 
 
 // MENU
-// Abre el menu
-function openMenu() {
-  console.log("Función openMenu");
-  document.getElementById("menu").classList.add("active");
-  document.getElementById("menu").style.backgroundColor ="white";
-}
-// CERRAR menu
-function closeMenu() {
-  console.log("Función closeMenu");
-  document.getElementById("menu").classList.remove("active");
-  document.getElementById("menu").style.backgroundColor ="transparent";
+function animar() {
+    "use strict";
+    document.getElementById("icono").classList.toggle("cambiar");
 }
 
+function openMenu() {
+    "use strict";
+    animar();
+    document.getElementById("menu-lista").classList.add("activo");
+    let overlay = document.getElementById("menu-overlay");
+    if (!overlay) {
+        overlay = document.createElement("div");
+        overlay.id = "menu-overlay";
+        overlay.onclick = closeMenu;
+        document.body.appendChild(overlay);
+    }
+    overlay.classList.add("activo");
+    
+    // Evitar scroll del body
+    document.body.style.overflow = "hidden";
+}
+
+function closeMenu() {
+    "use strict";
+    animar();
+    document.getElementById("menu-lista").classList.remove("activo");
+    // document.getElementById("menu").style.display = "none";
+    // document.getElementById("menu").style.transform ="translateX(calc(-100% + 4rem))";
+    // document.getElementById("menu").style.backgroundColor ="transparent";
+    // Ocultar overlay
+    const overlay = document.getElementById("menu-overlay");
+    if (overlay) {
+        overlay.classList.remove("activo");
+    }
+    document.body.style.overflow = "auto";
+}
+
+function menu() {
+    "use strict";
+    const menuElement = document.getElementById("menu-lista");
+    if (menuElement.classList.contains("activo")) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+}
 
 
 // GALERIA DE IMAGENES
