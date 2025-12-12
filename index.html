@@ -7,6 +7,9 @@
         <link href="MEDIA/IMG/FAVICON.svg" rel="icon" type="image/png">
         <!-- CSS -->
         <link href="CSS/styles.css" rel="stylesheet" type="text/css">
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
         <!-- FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +56,7 @@
             </nav>
 
             <div class="title_header">
-                <div>
+                <div data-aos="zoom-in">
                     <h1>Venecia</h1>
                     <h3>donde cada paso inspira</h3>
                 </div>
@@ -66,12 +69,12 @@
         <!-- SECCION - HITORIA -->
         <section id="historia">
             <div class="title_lineas">
-                <div class="linea"></div>
+                <div class="linea" data-aos="fade-right"></div>
                 <h2>Historia</h2>
-                <div class="linea"></div>
+                <div class="linea" data-aos="fade-left"></div>
             </div>
 
-            <p>Venecia no nació en una fecha exacta, como dice el mito del año 421, sino que surgió entre los siglos V y VI, cuando habitantes del continente huyeron de invasiones y se refugiaron en los islotes de la laguna. Con el tiempo, esos asentamientos temporales se volvieron permanentes y, aunque la zona dependía de Bizancio, los pobladores fueron ganando autonomía eligiendo a su propio “dux”.
+            <p data-aos="fade-up">Venecia no nació en una fecha exacta, como dice el mito del año 421, sino que surgió entre los siglos V y VI, cuando habitantes del continente huyeron de invasiones y se refugiaron en los islotes de la laguna. Con el tiempo, esos asentamientos temporales se volvieron permanentes y, aunque la zona dependía de Bizancio, los pobladores fueron ganando autonomía eligiendo a su propio “dux”.
 
             La isla de Rialto se convirtió en el núcleo principal, especialmente tras la llegada en 828 de las reliquias de San Marcos, que dieron prestigio religioso y político a la comunidad. Al crecer la población, las islas se unieron mediante barrios construidos sobre pilotes, y la ciudad se fortificó ante ataques como el de los húngaros en 899.
 
@@ -82,16 +85,39 @@
         <section id="descubre">
             <div class="title">
                 <div class="title_lineas">
-                    <div class="linea"></div>
+                    <div class="linea" data-aos="fade-right"></div>
                     <h2>Descubre Venecia</h2>
-                    <div class="linea"></div>
+                    <div class="linea" data-aos="fade-left"></div>
                 </div>
                 <h4>desde otra perspectiva</h4>
             </div>
             <div class="mapa-google">
                 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1j7UsdlxaJrS2yGtRvjO8sHfl4bVwLpE&ehbc=2E312F&noprof=1"></iframe>
             </div>
-            <!-- TO DO - Imagenes monumentos importantes -->
+            <div class="monumentos">
+                <div>
+                    <h2 data-aos="zoom-in-right">Gran canal</h2>
+                    <p data-aos="fade-up">El Gran Canal es el más grande e importante de todos los canales de Venecia. Sus cuatro kilómetros de longitud recorren Venecia dividiendo la ciudad en dos partes.</p>
+                    <figure data-aos="fade-up">
+                        <img src="MEDIA/IMG/Gran_canal.webp">
+                    </figure>
+                </div>
+                <div>
+                    <h2 data-aos="zoom-in-right">Plaza de San Marcos</h2>
+                    <p data-aos="fade-up">La Plaza San Marcos, construida en el siglo IX, es el principal centro histórico y social de Venecia y la única denominada “piazza”. Con 170 metros de largo y forma trapezoidal, conecta con la Piazzetta San Marco y la dei Leoncini, rodeada por las Procuratie y la Torre dell’Orologio. Desde el siglo XVI alberga cafeterías emblemáticas, destacando el Caffè Florian (1720), símbolo de la tradición veneciana.</p>
+                    <figure data-aos="fade-up">
+                        <img src="MEDIA/IMG/Plaza_SanMarcos.webp">
+                    </figure>
+                </div>
+                <div>
+                    <h2 data-aos="zoom-in-right">Libreria Acqua Alta</h2>
+                    <p data-aos="fade-up">La Librería Acqua Alta es considerada una de las más singulares del mundo. Su nombre, que significa “agua alta”, hace referencia a las frecuentes inundaciones que sufre la ciudad. Para proteger los libros, el dueño ideó una solución muy veneciana: en lugar de estanterías tradicionales, los libros se almacenan en bañeras, góndolas y hasta en una pequeña barca dentro del local. Además, uno de sus rincones más famosos es una escalera hecha completamente de libros viejos, que ofrece una vista encantadora del canal. Este lugar no solo es una librería, sino también una experiencia única que mezcla literatura, creatividad y el espíritu veneciano.</p>
+                    <figure data-aos="fade-up">
+                        <img src="MEDIA/IMG/Libreria_AcquaAlta.webp">
+                    </figure>
+                </div>
+            </div>
+            <a href="index.html" class="sb"><span class="carnaval-btn">+</span></a>
         </section>
 
 
@@ -99,9 +125,9 @@
         <section id="carnavales">
             <div class="title">
                 <div class="title_lineas">
-                    <div class="linea"></div>
-                    <h2>Carnvales</h2>
-                    <div class="linea"></div>
+                    <div class="linea" data-aos="fade-right"></div>
+                    <h2>Carnavales</h2>
+                    <div class="linea" data-aos="fade-left"></div>
                 </div>
                 <h4>conoce la historia completa</h4>
             </div>
@@ -184,16 +210,13 @@
                         <input type="email" id="correo" placeholder="Escriba su e-mail" required>
                         <input type="submit" value="Enviar">
                     </form>
-                    <!-- <button>Enviar</button> -->
                 </div>
             </div>
         </footer>
 
 
-
-
-
         <!-- JS -->
+        <script src="JS/Chart.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="JS/script.js"></script>
     </body>

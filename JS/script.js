@@ -74,7 +74,7 @@ function setImagen() {
         indice += 1;
     }
     //Se añade el temporización de 5s (5000ms)
-    setTimeout(setImagen, 5000);
+    setTimeout(setImagen, 4000);
 }
 
 /**
@@ -92,4 +92,115 @@ function setImagenActual(n) {
 window.onload = function () {
     "use strict";
     setImagen();
-};s
+};
+
+
+// Gráfica de línea
+function cargaGraficoLinea() {
+    var datos = {
+        labels: ["2019", "2020", "2021", "2022", "2023", "2024"],
+        datasets: [{
+            label: "Recaudacion anual generada por el carnaval",
+            borderColor: "rgba(255, 255, 255, 0.7)",
+            backgroundColor: "rgba(255, 255, 255, 0.3)",
+            pointBorderColor: "#ffffff",
+            pointBackgroundColor: "#FFFFFF", // Relleno de puntos
+            pointHoverRadius: 8,
+            pointHoverBackgroundColor: "#24110F",
+            pointHoverBorderColor: "white",
+            borderWidth: 3,
+            tension: 0.3, // Suaviza la línea
+            fill: true,
+            data: [1.7, 0.78, 0.99, 1.4, 1.5, 1.9]
+        }],
+    };
+
+    var config = {
+        type: "line",
+        data: datos,
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: "#ffffffff",
+                        font: {
+                            size: 14,
+                            letterSpacing: 0.5,
+                        },
+                    }
+                },
+                tooltip: {
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                    titleColor: "black",
+                    bodyColor: "black",
+                    cornerRadius: 6
+                }
+            },
+            scales: {
+                x: {
+                    border: {
+                        color: "white",
+                        width: 1,
+                        borderColor: "white"
+                    }
+                    
+                },
+                y: {
+                    min: 0,
+                    max: 2.5,
+                    title: {
+                        display: true,
+                        text: "Billones de euros recaudados(bn)"
+                    },
+                    border: {
+                        color: "white",
+                        width: 1,
+                    }
+                }
+            }
+        }
+    };
+
+    var grafico = document.getElementById("lineas").getContext("2d");
+    new Chart(grafico, config);
+}
+
+
+$(document).ready(function () {
+    cargaGraficoLinea();
+});
+
+
+
+// IMAGEN FLOTANTE
+const rows = document.querySelectorAll(".row");
+const floating = document.getElementById("floating-img");
+
+rows.forEach(row => {
+    row.addEventListener("mouseenter", e => {
+        const imgSrc = row.getAttribute("data-image");
+        floating.innerHTML = `<img src="${imgSrc}">`;
+        floating.style.opacity = "1";
+    });
+
+    row.addEventListener("mouseleave", e => {
+        floating.style.opacity = "0";
+    });
+
+    row.addEventListener("mousemove", e => {
+        // Mover ventana flotante cerca del cursor
+        floating.style.top = (e.clientY + 20) + "px";
+        floating.style.left = (e.clientX + 20) + "px";
+    });
+});
+
+
+// ANIMACION - SCROLL COSAS
+/*jslint devel: true*/
+/*eslint-env browser*/
+window.onload = function () {
+    "use strict";
+    AOS.init({
+        duration: 1500,
+    });
+};
