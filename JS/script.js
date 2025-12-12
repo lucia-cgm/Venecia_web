@@ -43,6 +43,22 @@ $(document).ready(function () {
 
 
 
+// MENU
+// Abre el menu
+function openMenu() {
+  console.log("Función openMenu");
+  document.getElementById("menu").classList.add("active");
+  document.getElementById("menu").style.backgroundColor ="white";
+}
+// CERRAR menu
+function closeMenu() {
+  console.log("Función closeMenu");
+  document.getElementById("menu").classList.remove("active");
+  document.getElementById("menu").style.backgroundColor ="transparent";
+}
+
+
+
 // GALERIA DE IMAGENES
 /**
  * Número de imagen que se está presentando
@@ -164,7 +180,6 @@ function cargaGraficoLinea() {
     var grafico = document.getElementById("lineas").getContext("2d");
     new Chart(grafico, config);
 }
-
 
 $(document).ready(function () {
     cargaGraficoLinea();
